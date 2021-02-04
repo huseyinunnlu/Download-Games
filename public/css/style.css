@@ -1,0 +1,157 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.row {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+body{
+  font-family: roboto;
+}
+nav{
+  background-color: #3E3E3E;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+nav ul{
+  float: right;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #ff0600;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    color: white;
+    display: block;
+  }
+  .main-nav ul{
+    z-index: 99999;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #3E3E3E;
+    top: 110px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #ff0600;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+.small-nav ul li a {
+  padding: 5px 6px;
+}
+
+.small-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  font-size: 110%;
+  padding: 5px;
+  text-align: center;
+}
+}
+
+.small-nav {
+  background-color: #4f4f4f;
+}
+
+.small-nav i {
+  color: white;
+}
+
+.small-nav ul li a {
+  padding: 5px 6px;
+}
+
+.small-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  font-size: 110%;
+  padding: 5px;
+}
+
+footer {
+  background-color: #3E3E3E;
+}
+
+footer .title{
+  color: white;
+  margin: 10px 0;
+}
+
+footer .container {
+  align-items: center;
+}
+
+
+.nav-items li a , .nav-items{
+  color: white;
+}
+
+.footer-alt {
+  background-color: #4f4f4f;
+}
