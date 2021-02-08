@@ -71,6 +71,9 @@
             <li>
               <a href="/adminpanel/settings"><i class="fa fa-gear"></i><span>Settings</span></a>
             </li>
+            <li>
+              <a href="/adminpanel/cat-lang-plat"><span>Category,Language,Platform</span></a>
+            </li>
 
 
 

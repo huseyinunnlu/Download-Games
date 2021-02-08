@@ -16,7 +16,7 @@
         <div class="row main-nav">
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn"><i style="color: white;" class="fas fa-bars"></i></label>
-            <label class="logo">DesignX</label>
+            <label class="logo">{{$data->logo}}</label>
             <ul>
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="#">Blog</a></li>
@@ -28,14 +28,13 @@
     <section class="small-nav">
         <div class="row">
             <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                @foreach($data->social as $key=>$social)
+                <li><a href="{{$social}}"><i class="{{$data->icon[$key]}}"></i></a></li>
+                @endforeach
             </ul>
         </div>
     </section>
-@yield('content')
+    @yield('content')
     <footer>
         <div class="container">
             <div class="row">
@@ -59,10 +58,10 @@
                     </ul>
                 </div>
             </div>
-    </footer>
-            <section class="footer-alt" style="text-align: center;">
-                Copyright
-            </section>
-        </div>
+        </footer>
+        <section class="footer-alt" style="text-align: center;">
+            Copyright
+        </section>
+    </div>
 </body>
 </html>

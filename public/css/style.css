@@ -41,7 +41,7 @@ nav ul li a{
   border-radius: 3px;
   text-transform: uppercase;
 }
-a.active,a:hover{
+nav a.active, nav a:hover{
   background: #ff0600;
   transition: .5s;
 }
