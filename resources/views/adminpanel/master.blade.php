@@ -74,6 +74,9 @@
             <li>
               <a href="/adminpanel/cat-lang-plat"><span>Category,Language,Platform</span></a>
             </li>
+            <li>
+              <a href="/adminpanel/posts"><span>Posts</span></a>
+            </li>
 
 
 

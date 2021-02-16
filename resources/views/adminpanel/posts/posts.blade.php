@@ -10,9 +10,9 @@
 							<h2 class="box-title" style="font-size:20px;">Categories Languages Types</h2>
 							<a href="/adminpanel/cat-lang-plat/addclp"><button class="btn btn-primary" style="margin-left: 15px;">Add New</button></a>
 						</div><!-- /.box-header -->
-						<form action="{{url('multipledelete')}}" method="post">
+						<form action="{{url('multipleDelete')}}" method="post">
 							{{@csrf_field()}}
-							<input type="hidden" name="tbl" value="{{encrypt('clps')}}">
+							<input type="hidden" name="tbl" value="{{encrypt('posts')}}">
 							<input type="hidden" name="tblid" value="{{encrypt('id')}}">
 							<div class="box-body">
 								<table id="example1" class="table table-bordered table-striped">
@@ -32,7 +32,8 @@
 											<tr>
 												<th>Title</th>
 												<th>İd</th>
-												<th>Type</th>
+												<th>Category</th>
+												<th>Platform</th>
 												<th>Status</th>
 												<th>Creation Date</th>
 												<th>Updated Date</th>
@@ -40,17 +41,18 @@
 										</div>
 									</thead>
 									<tbody>
-										@foreach($data as $cpl)
+										@foreach($data as $post)
 										<tr>
-											<td><input type="checkbox" name="select-data[]" value="{{$cpl->id}}" style="margin: 5px;"><a href="/adminpanel/cat-lang-plat/updateclp/{{$cpl->id}}">{{$cpl->title}}</a></td>
-											<td>{{$cpl->id}}</td>
-											<td>{{$cpl->type}}</td>
-											<td>{{$cpl->status}}</td>
-											<td>{{$cpl->created_at}}</td>
-											<td>@if(empty($cpl->updated_at))
+											<td><input type="checkbox" name="select-data[]" value="{{$post->id}}" style="margin: 5px;"><a href="/adminpanel/posts/updatepost/{{$post->id}}">{{$post->title}}</a></td>
+											<td>{{$post->id}}</td>
+											<td>{{$post->category_id}}</td>
+											<td>{{$post->platform_id}}</td>
+											<td>{{$post->status}}</td>
+											<td>{{$post->created_at}}</td>
+											<td>@if(empty($post->updated_at))
 												Boş
 											@else
-											{{$cpl->updated_at}}
+											{{$post->updated_at}}
 											@endif</td>
 										</tr>
 										@endforeach

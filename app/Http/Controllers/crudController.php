@@ -23,7 +23,30 @@ class crudController extends Controller
 
         if (Request::has('icon')) {
             $data['icon'] = implode(',',$data['icon']);
-        }        
+        } 
+        /*Post*/
+        if (Request::has('images')) {
+            $data['images'] = implode(',',$data['images']);
+        } 
+
+        if (Request::has('videos')) {
+            $data['videos'] = implode(',',$data['videos']);
+        }               
+
+        if (Request::has('category_id')) {
+            $data['category_id'] = implode(',',$data['category_id']);
+        }   
+
+        if (Request::has('language_id')) {
+            $data['language_id'] = implode(',',$data['language_id']);
+        }                
+
+        if (Request::has('platform_id')) {
+            $data['platform_id'] = implode(',',$data['platform_id']);
+        } 
+
+        /*Post Bitis*/
+
 
  		//Category img vs bolumu
 /*
@@ -54,6 +77,31 @@ class crudController extends Controller
         if (Request::has('icon')) {
             $data['icon'] = implode(',',$data['icon']);
         }
+
+                /*Post*/
+        if (Request::has('images')) {
+            $data['images'] = implode(',',$data['images']);
+        } 
+
+        if (Request::has('videos')) {
+            $data['videos'] = implode(',',$data['videos']);
+        }               
+
+        if (Request::has('category_id')) {
+            $data['category_id'] = implode(',',$data['category_id']);
+        }   
+
+        if (Request::has('language_id')) {
+            $data['language_id'] = implode(',',$data['language_id']);
+        }                
+
+        if (Request::has('platform_id')) {
+            $data['platform_id'] = implode(',',$data['platform_id']);
+        } 
+
+        /*Post Bitis*/
+
+        
         /*
 
         if (Request::has('category_id')) {

@@ -4,64 +4,70 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/grid/simple-grid.css">
-    <link rel="stylesheet" type="text/css" href="/grid/simple-grid.min.css">
-    <link rel="stylesheet" type="text/css" href="/grid/simple-grid.scss">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/grid.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="row main-nav">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn"><i style="color: white;" class="fas fa-bars"></i></label>
-            <label class="logo">{{$data->logo}}</label>
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Tools</a></li>
-                <li><a href="#">Contact</a></li>
+    <header>
+        <nav>
+            <div class="logo">
+                <h4><a href="/">Download Games</a></h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#"><span><ion-icon name="home"></ion-icon></span>Anasayfa</a></li>
+                <li><a href="#"><span><ion-icon name="pencil"></ion-icon></span>Blog</a></li>
+                <li><a href="#"><span><ion-icon name="hammer"></ion-icon></span>Araçlar</a></li>
+                <li><a href="#"><span><ion-icon name="mail"></ion-icon></span>İletişim</a></li>
             </ul>
-        </div>
-    </nav>
-    <section class="small-nav">
-        <div class="row">
-            <ul>
-                @foreach($data->social as $key=>$social)
-                <li><a href="{{$social}}"><i class="{{$data->icon[$key]}}"></i></a></li>
-                @endforeach
-            </ul>
-        </div>
-    </section>
-    @yield('content')
-    <footer>
-        <div class="container">
+        </nav>
+        <section class="nav-social">
             <div class="row">
-                <div class="col-4">
-                    <h3 class="title">About Us</h3>
-                    <p class="nav-items">Seamlessly deliver effective platforms without professional products. Globally orchestrate B2C applications and value-added markets. Monotonectally re-engineer market-driven.</p>
+                <ul class="nav-social-links">
+                    <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-youtube"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+    @yield('content')
+
+    <footer>
+        <div class="footer-main">
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <p class="about">
+                        asdads
+                    </p>
                 </div>
-                <div class="col-4">
-                    <h3 class="title">Navigation</h3>
-                    <ul class="nav-items">
-                        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-                        <li><a href="#"><i class="fas fa-pencil-alt"></i>Blog</a></li>
-                        <li><a href="#"><i class="fas fa-wrench"></i></i>Tools</a></li>
-                        <li><a href="#"><i class="fas fa-envelope"></i>Contact Us</a></li>
+                <div class="col span-1-of-3">
+                    <ul class="footer-nav-links">
+                        <li><a href="#"><span><ion-icon name="home"></ion-icon></span>Anasayfa</a></li>
+                        <li><a href="#"><span><ion-icon name="pencil"></ion-icon></span>Blog</a></li>
+                        <li><a href="#"><span><ion-icon name="hammer"></ion-icon></span>Araçlar</a></li>
+                        <li><a href="#"><span><ion-icon name="mail"></ion-icon></span>İletişim</a></li>
                     </ul>
                 </div>
-                <div class="col-4">
-                    <h3 class="title">Tools</h3>
-                    <ul class="nav-items">
-                        <li><a href="#"><i class="fas fa-home"></i>Tool1</a></li>
+                <div class="col span-1-of-3">
+                    <ul class="footer-social-links">
+                    <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-youtube"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
                     </ul>
                 </div>
             </div>
-        </footer>
-        <section class="footer-alt" style="text-align: center;">
-            Copyright
-        </section>
-    </div>
+        </div>
+        <div class="footer-small">
+            <div class="row">
+                <span>Copyright</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

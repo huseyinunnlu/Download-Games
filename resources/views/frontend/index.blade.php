@@ -1,66 +1,100 @@
 @extends('frontend.master')
 @section('content')
+
+
 <div class="row">
-	<section>
-		<div class="trend">
-			<ul class="trend-item">
-				<li><a href="#"><img src="https://i.hizliresim.com/wUy28z.jpg"></a></li>
-			</ul>
+	<section class="popular">
+		<div class="popular-content">
+			<div class="popular-item">
+				<a href="#">
+					<img src="https://www.torrentoyunindir.com/wp-content/uploads/rdr2slide.jpg">
+				</a>
+			</div>
 		</div>
 	</section>
+
 	<div class="row">
-		<div class="col-9">
-			<section class="games-show">
-				<div class="games-title">
-					<ul>
-						<li></li>
-					</ul>
-				</div>
-				<div class="games-main">
-					<div class="games-content">
-						
+		<section class="games">
+			<div class="col span-9-of-12">
+				<div class="filter">
+					<div class="sort">
+						<ul class="sort-item">
+							<li><a href="#"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Yeni Eklenenler</a></li>
+							<li><a href="#"><ion-icon name="arrow-forward-circle-outline"></ion-icon>En Çok Bakılanlar</a></li>
+							<li class="search">
+								<input type="search" name="search" placeholder="Search">
+								<button>Ara</button>
+							</li>
+						</ul>
+						<span>									
+							<input type="search" name="search" placeholder="Search">
+							<button>Ara</button>
+						</span>
 					</div>
 				</div>
-			</section>	
-		</div>
-		<div class="col-3">
-			<section class="games-category col-3">
-				<div class="games-title"></div>
-				<div class="games-main">
-					<div class="games-content">
-
+				<div class="game-show">
+					<div class="row">
+						<div class="col span-1-of-3">
+							<div class="game-show-content">
+								<a href="">
+									<img src="https://www.torrentoyunindir.com/wp-content/uploads/rdr2slide.jpg">
+									<span>Title</span>
+									<span>0 Görüntülenme</span>
+								</a>
+							</div>
+						</div>
+						<div class="col span-1-of-3">
+							<div class="game-show-content">
+								<a href="">
+									<img src="https://www.torrentoyunindir.com/wp-content/uploads/rdr2slide.jpg">
+									<span class="title">Farmin Simulator 19 Platinum Edition</span>
+									<span class="stats">0 Görüntülenme</span>
+								</a>
+							</div>
+						</div>
+						<div class="col span-1-of-3">
+							<div class="game-show-content">
+								<a href="">
+									<img src="https://www.torrentoyunindir.com/wp-content/uploads/rdr2slide.jpg">
+									<span>Title</span>
+									<span>0 Görüntülenme</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<div class="game-show-content">
+								<a href="">
+									<img src="https://www.torrentoyunindir.com/wp-content/uploads/rdr2slide.jpg">
+									<span>Title</span>
+									<span>0 Görüntülenme</span>
+								</a>
+							</div>
+						</div>
+						<div class="col span-1-of-3">
+							<div class="game-show-content">
+								<a href="">
+									<img src="https://www.torrentoyunindir.com/wp-content/uploads/rdr2slide.jpg">
+									<span class="title">Farmin Simulator 19 Platinum Edition</span>
+									<span class="stats">0 Görüntülenme</span>
+								</a>
+							</div>
+						</div>
+						<div class="col span-1-of-3">
+							<div class="game-show-content">
+								<a href="">
+									<img src="https://www.torrentoyunindir.com/wp-content/uploads/rdr2slide.jpg">
+									<span>Title</span>
+									<span>0 Görüntülenme</span>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+			<div class="col span-3-of-12">asd</div>
+		</section>
 	</div>
-</div>
-<style type="text/css">
-	.trend {
-		height: auto;
-		margin: 30px 0;
-		background-color: #3E3E3E;
-		border-radius: 5px;
-	}
 
-	.trend-item img {
-		width: 150px;
-		height: 210px;
-	}
-
-	.trend-item li {
-		border-radius: 3px;
-		padding: 5px 5px 0 5px;
-		border-bottom: 0px;
-		background-color: gray;
-		margin: 10px 0;
-		
-	}
-
-	.trend-item {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-	}
-</style>
-@endsection
+	@endsection
