@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 /*Front View*/
 Route::get('/', 'App\Http\Controllers\frontController@index');
+Route::get('/article/{id}' ,'App\Http\Controllers\frontController@article');
+Route::get('/category/article/{id}' ,'App\Http\Controllers\frontController@article');
+Route::get('/article/gallery/{id}' ,'App\Http\Controllers\frontController@articleGallery');
+Route::get('/article/sysreq/{id}' ,'App\Http\Controllers\frontController@articleSysreq');
+Route::get('/category/{id}' ,'App\Http\Controllers\frontController@category');
+Route::post('/sortcat{id}' ,'App\Http\Controllers\frontController@category');
 
 
 /*Admin View*/

@@ -35,7 +35,7 @@ class adminController extends Controller
 
     public function updateclp($id) {
         $data = DB::table('clps')->where('id',$id)->first();
-        return viaw('adminpanel/clp/updateclp',['data'=>$data]);
+        return view('adminpanel/clp/updateclp',['data'=>$data]);
     }
 
     /*Posts*/

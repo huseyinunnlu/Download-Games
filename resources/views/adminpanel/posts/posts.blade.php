@@ -7,8 +7,8 @@
 				<div class="col-xs-12">
 					<div class="box">
 						<div class="box-header">
-							<h2 class="box-title" style="font-size:20px;">Categories Languages Types</h2>
-							<a href="/adminpanel/cat-lang-plat/addclp"><button class="btn btn-primary" style="margin-left: 15px;">Add New</button></a>
+							<h2 class="box-title" style="font-size:20px;">All Posts</h2>
+							<a href="/adminpanel/posts/addpost"><button class="btn btn-primary" style="margin-left: 15px;">Add New</button></a>
 						</div><!-- /.box-header -->
 						<form action="{{url('multipleDelete')}}" method="post">
 							{{@csrf_field()}}
